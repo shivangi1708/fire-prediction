@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fire Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 40px;
+            background-color: #f4f4f4;
+        }
+        .login {
+            background: white;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        .mb-3 {
+            margin-bottom: 15px;
+        }
+        .form-label {
+            font-weight: bold;
+        }
+        .form-control {
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+        }
+        .btn {
+            width: 100%;
+            padding: 10px;
+            background: #007bff;
+            border: none;
+            color: white;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .btn:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+<div class="login">
+    <h1>Fire Prediction Indicator</h1>
+
+    <form action="{{ url_for('predict_datapoint') }}" method="post">
+        <legend><h2>Enter Environmental Factors</h2></legend>
+
+        {% macro input(name, label, step="any") -%}
+        <div class="mb-3">
+            <label class="form-label">{{ label }}</label>
+            <input class="form-control" type="number" name="{{ name }}" step="{{ step }}" required
+                   value="{{ request.form.get(name, '') }}" />
+        </div>
+        {%- endmacro %}
+
+        {{ input('collector_id', 'Collector ID') }}
+        {{ input('month', 'Month') }}
+
+        <div class="mb-3">
+            <label class="form-label">Time of Day</label>
+            <select class="form-control" name="time_of_day" required>
+                {% for tod in ['morning', 'afternoon', 'evening', 'night'] %}
+                    <option value="{{ tod }}" {% if request.form.get('time_of_day') == tod %}selected{% endif %}>{{ tod.title() }}</option>
+                {% endfor %}
+            </select>
+        </div>
+
+        {{ input('temperature', 'Temperature') }}
+        {{ input('humidity', 'Humidity') }}
+        {{ input('wind_intensity', 'Wind Intensity') }}
+        {{ input('rain', 'Rain') }}
+        {{ input('surface_litter', 'Surface Litter') }}
+        {{ input('tree_age', 'Tree Age') }}
+        {{ input('tree_density', 'Tree Density') }}
+        {{ input('l_score', 'L Score') }}
+        {{ input('c_score', 'C Score') }}
+
+        <div class="mb-3">
+            <input class="btn" type="submit" value="Predict Fire" />
+        </div>
+    </form>
+
+    {% if results is not none %}
+        <h2>🔍 Prediction: <strong>{{ "Rain" if results == 1 else "No Rain" }}</strong></h2>
+    {% endif %}
+</div>
+</body>
+</html>

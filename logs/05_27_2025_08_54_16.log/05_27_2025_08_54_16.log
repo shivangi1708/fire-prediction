@@ -1,0 +1,7 @@
+[ 2025-05-27 08:54:16,380 ] 97 werkzeug - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:5000
+ * Running on http://192.168.1.107:5000
+[ 2025-05-27 08:54:16,381 ] 97 werkzeug - INFO - [33mPress CTRL+C to quit[0m
+[ 2025-05-27 08:54:20,408 ] 97 werkzeug - INFO - 127.0.0.1 - - [27/May/2025 08:54:20] "POST / HTTP/1.1" 200 -
+[ 2025-05-27 08:57:02,091 ] 97 werkzeug - INFO - 127.0.0.1 - - [27/May/2025 08:57:02] "POST / HTTP/1.1" 200 -

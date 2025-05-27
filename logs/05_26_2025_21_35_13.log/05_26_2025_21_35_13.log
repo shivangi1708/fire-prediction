@@ -1,0 +1,3 @@
+[ 2025-05-26 21:35:13,197 ] 97 werkzeug - WARNING -  * Debugger is active!
+[ 2025-05-26 21:35:13,202 ] 97 werkzeug - INFO -  * Debugger PIN: 102-000-300
+[ 2025-05-26 21:35:51,440 ] 97 werkzeug - INFO -  * Detected change in 'C:\\Users\\91963\\Project\\ml_project\\ForestFireprediction\\app.py', reloading

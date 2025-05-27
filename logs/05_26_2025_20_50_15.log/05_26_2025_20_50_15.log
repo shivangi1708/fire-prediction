@@ -1,0 +1,12 @@
+[ 2025-05-26 20:50:17,290 ] 28 root - INFO - Entered the data ingestion method or component
+[ 2025-05-26 20:50:17,294 ] 31 root - INFO - Read the dataset as dataframe
+[ 2025-05-26 20:50:17,300 ] 37 root - INFO - Train test split initiated
+[ 2025-05-26 20:50:17,307 ] 44 root - INFO - Inmgestion of the data iss completed
+[ 2025-05-26 20:50:17,349 ] 67 root - INFO - Train and test data successfully read.
+[ 2025-05-26 20:50:17,350 ] 46 root - INFO - Numerical columns: ['collector.id', 'c.score', 'l.score', 'rain', 'tree.age', 'surface.litter', 'wind.intensity', 'humidity', 'tree.density', 'month']
+[ 2025-05-26 20:50:17,351 ] 47 root - INFO - Categorical columns: ['time.of.day']
+[ 2025-05-26 20:50:17,351 ] 79 root - INFO - Fitting and transforming training data.
+[ 2025-05-26 20:50:17,359 ] 82 root - INFO - Transforming test data.
+[ 2025-05-26 20:50:17,364 ] 88 root - INFO - Saving preprocessing object.
+[ 2025-05-26 20:50:17,365 ] 33 root - INFO - Split training and test input data
+[ 2025-05-26 20:51:20,172 ] 104 root - INFO - Best model found: XGBoost with score 0.6862

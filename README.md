@@ -45,7 +45,9 @@ This is a Flask-based web application that predicts whether a fire will occur ba
 After submitting values:
 
 🔍 Prediction: Rain
+
 OR
+
 🔍 Prediction: No Rain
 
 <img src="assets\Screenshot 2025-05-27 090022.png" alt="Prediction Result" width="700"/>

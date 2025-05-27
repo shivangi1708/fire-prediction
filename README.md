@@ -48,4 +48,4 @@ After submitting values:
 OR
 🔍 Prediction: No Rain
 
-![Web App Screenshot](assets/Screenshot 2025-05-27 090022.png)
+<img src="assets\Screenshot 2025-05-27 090022.png" alt="Prediction Result" width="700"/>

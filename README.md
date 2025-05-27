@@ -1,6 +1,6 @@
 # 🔥 Fire Prediction Web Application
 
-This is a Flask-based web application that predicts whether a fire will occur based on various environmental and forest-related input features. The machine learning model behind the app outputs `1` for **Rain (fire less likely)** and `0` for **No Rain (fire more likely)**.
+This is a Flask-based web application that predicts whether a fire will occur based on various environmental and forest-related input features. The machine learning model behind the app outputs `1` for **Fire (fire less likely)** and `0` for **No Fire (fire more likely)**.
 
 ---
 
@@ -8,7 +8,7 @@ This is a Flask-based web application that predicts whether a fire will occur ba
 
 - Interactive HTML form for environmental data input
 - Backend Flask app using a trained ML model
-- Real-time prediction results: "Rain" or "No Rain"
+- Real-time prediction results: "Fire" or "No Fire"
 - Clean and responsive interface with CSS styling
 
 ---
@@ -37,17 +37,17 @@ This is a Flask-based web application that predicts whether a fire will occur ba
 1. User fills in the form on the homepage.
 2. Data is sent to `/predictdata` via POST.
 3. Flask app processes input, converts data, and calls the trained model.
-4. Result (`1` or `0`) is shown as "Rain" or "No Rain".
+4. Result (`1` or `0`) is shown as "Fire" or "No Fire".
 
 ---
 
 💡 Example Output
 After submitting values:
 
-🔍 Prediction: Rain
+🔍 Prediction: Fire
 
 OR
 
-🔍 Prediction: No Rain
+🔍 Prediction: No Fire
 
 <img src="assets\Screenshot 2025-05-27 090022.png" alt="Prediction Result" width="700"/>
